@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet, Image, TextInput, TouchableOpacity, Text } from 'react-native';
+import { View, Text, StyleSheet, Image, TextInput, TouchableOpacity } from 'react-native';
 
 import logo from '../assets/logo.png';
 
@@ -41,7 +41,15 @@ const styles = StyleSheet.create({
     paddingHorizontal: 15,
   },
 
-  button: {},
+  button: {
+    height: 46,
+    alignSelf: 'stretch',
+    backgroundColor: '#DF4723',
+    borderRadius: 4,
+    marginTop: 10,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
 
   buttonText: {},
 });
