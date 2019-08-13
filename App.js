@@ -6,11 +6,13 @@
  * @flow
  */
 
-import React from "react";
-import { Text } from "react-native";
+import React from 'react';
+import { View, Text } from 'react-native';
 
 export default function App() {
   return (
-    <Text>Hello World</Text>
+    <View style={{ flex: 1, backgroundColor: '#7159c1' }}>
+      <Text>Hello World</Text>
+    </View>
   );
 }
