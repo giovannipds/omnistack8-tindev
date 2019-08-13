@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { KeyboardAvoidingView, Platform, Text, StyleSheet, Image, TextInput, TouchableOpacity } from 'react-native';
 
 import logo from '../assets/logo.png';
 
 export default function Login({ navigation }) {
+  const [user, setUser] = useState('');
+
   function handleLogin() {
+    console.log(user);
+
     navigation.navigate('Main');
   }
 
@@ -22,6 +26,7 @@ export default function Login({ navigation }) {
         placeholder="Digite seu usuário no Github"
         placeholderTextColor="#999"
         style={styles.input}
+        onChangeText={setUser}
       />
 
       <TouchableOpacity onPress={handleLogin} style={styles.button}>
