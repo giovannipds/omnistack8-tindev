@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet, Image } from 'react-native';
+import { View, StyleSheet, Image, TextInput } from 'react-native';
 
 import logo from '../assets/logo.png';
 
@@ -7,6 +7,8 @@ export default function Login() {
   return (
     <View style={styles.container}>
       <Image source={logo} />
+
+      <TextInput />
     </View>
   );
 }
