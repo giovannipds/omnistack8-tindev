@@ -5,12 +5,18 @@ import logo from '../assets/logo.png';
 
 export default function Login() {
   return (
-    <View styles="styles.container">
-      <Image source={logo}></Image>>
+    <View style={styles.container}>
+      <Image source={logo} />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {},
+  container: {
+    flex: 1,
+    backgroundColor: '#f5f5f5',
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 30
+  },
 });
