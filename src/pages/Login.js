@@ -8,7 +8,7 @@ export default function Login() {
     <View style={styles.container}>
       <Image source={logo} />
 
-      <TextInput />
+      <TextInput placeholder="Digite seu usuário no Github" />
     </View>
   );
 }
