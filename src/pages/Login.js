@@ -8,7 +8,10 @@ export default function Login() {
     <View style={styles.container}>
       <Image source={logo} />
 
-      <TextInput placeholder="Digite seu usuário no Github" />
+      <TextInput
+        placeholder="Digite seu usuário no Github"
+        style={styles.input}
+      />
     </View>
   );
 }
@@ -21,4 +24,15 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     padding: 30
   },
+
+  input: {
+    height: 46,
+    alignSelf: 'stretch',
+    backgroundColor: '#FFF',
+    borderColor: '#ddd',
+    borderWidth: 1,
+    borderRadius: 4,
+    marginTop: 20,
+    paddingHorizontal: 15,
+  }
 });
