@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet, Image, TextInput } from 'react-native';
+import { View, StyleSheet, Image, TextInput, Button } from 'react-native';
 
 import logo from '../assets/logo.png';
 
@@ -13,6 +13,8 @@ export default function Login() {
         placeholderTextColor="#999"
         style={styles.input}
       />
+
+
     </View>
   );
 }
