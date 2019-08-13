@@ -12,7 +12,7 @@ import { View, Text, StyleSheet } from 'react-native';
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Hello World</Text>
+      <Text style={styles.text}>Hello World</Text>
     </View>
   );
 }
@@ -22,5 +22,10 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#7159c1',
     justifyContent: 'center'
+  },
+  text: {
+    fontWeight: 'bold',
+    color: '#fff',
+    fontSize: 20
   },
 })
