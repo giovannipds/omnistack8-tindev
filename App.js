@@ -11,7 +11,7 @@ import { View, Text } from 'react-native';
 
 export default function App() {
   return (
-    <View style={{ flex: 1, backgroundColor: '#7159c1' }}>
+    <View style={{ flex: 1, backgroundColor: '#7159c1', justifyContent: 'center' }}>
       <Text>Hello World</Text>
     </View>
   );
