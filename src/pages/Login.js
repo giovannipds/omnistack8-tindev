@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet, Image, TextInput, Button } from 'react-native';
+import { View, StyleSheet, Image, TextInput, TouchableOpacity, Text } from 'react-native';
 
 import logo from '../assets/logo.png';
 
@@ -14,7 +14,9 @@ export default function Login() {
         style={styles.input}
       />
 
-
+      <TouchableOpacity style={styles.button}>
+        <Text style={styles.buttonText}>Enviar</Text>
+      </TouchableOpacity>
     </View>
   );
 }
@@ -37,5 +39,9 @@ const styles = StyleSheet.create({
     borderRadius: 4,
     marginTop: 20,
     paddingHorizontal: 15,
-  }
+  },
+
+  button: {},
+
+  buttonText: {},
 });
