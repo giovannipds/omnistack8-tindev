@@ -10,6 +10,7 @@ export default function Login() {
 
       <TextInput
         placeholder="Digite seu usuário no Github"
+        placeholderTextColor="#999"
         style={styles.input}
       />
     </View>
