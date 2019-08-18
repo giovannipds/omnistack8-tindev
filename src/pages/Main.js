@@ -1,5 +1,5 @@
 import React from 'react';
-import { SafeAreaView, Image, StyleSheet } from 'react-native';
+import { View, SafeAreaView, Image, StyleSheet } from 'react-native';
 
 import logo from '../assets/logo.png';
 
@@ -7,6 +7,12 @@ export default function Main() {
   return (
     <SafeAreaView style={styles.container}>
       <Image source={logo} />
+
+      <View style={styles.cardsContainer}>
+        <View style={styles.card}>
+          <Image source={{ uri: 'https://avatars2.githubusercontent.com/u/861751?v=4' }} />
+        </View>
+      </View>
     </SafeAreaView>
   );
 }
@@ -18,4 +24,5 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between'
   },
+  cardsContainer: {},
 });
