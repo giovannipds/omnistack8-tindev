@@ -83,4 +83,11 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: '#333',
   },
+
+  bio: {
+    fontSize: 14,
+    color: '#999',
+    marginTop: 5,
+    lineHeight: 18,
+  },
 });
