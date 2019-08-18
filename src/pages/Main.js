@@ -13,7 +13,7 @@ export default function Main() {
           <Image style={styles.avatar} source={{ uri: 'https://avatars2.githubusercontent.com/u/861751?v=4' }} />
           <View style={styles.footer}>
             <Text style={styles.name}>Diego Fernandes</Text>
-            <Text style={styles.bio}>CTO na @Rocketseat. Apaixonado por Javascript, ReactJS, React Native, NodeJS e todo ecossistema em torno dessas tecnologias.</Text>
+            <Text style={styles.bio} numberOfLines={3}>CTO na @Rocketseat. Apaixonado por Javascript, ReactJS, React Native, NodeJS e todo ecossistema em torno dessas tecnologias.</Text>
           </View>
         </View>
 
@@ -21,7 +21,7 @@ export default function Main() {
           <Image style={styles.avatar} source={{ uri: 'https://avatars2.githubusercontent.com/u/861751?v=4' }} />
           <View style={styles.footer}>
             <Text style={styles.name}>Diego Fernandes</Text>
-            <Text style={styles.bio}>CTO na @Rocketseat. Apaixonado por Javascript, ReactJS, React Native, NodeJS e todo ecossistema em torno dessas tecnologias.</Text>
+            <Text style={styles.bio} numberOfLines={3}>CTO na @Rocketseat. Apaixonado por Javascript, ReactJS, React Native, NodeJS e todo ecossistema em torno dessas tecnologias.</Text>
           </View>
         </View>
 
@@ -29,7 +29,7 @@ export default function Main() {
           <Image style={styles.avatar} source={{ uri: 'https://avatars2.githubusercontent.com/u/861751?v=4' }} />
           <View style={styles.footer}>
             <Text style={styles.name}>Diego Fernandes</Text>
-            <Text style={styles.bio}>CTO na @Rocketseat. Apaixonado por Javascript, ReactJS, React Native, NodeJS e todo ecossistema em torno dessas tecnologias.</Text>
+            <Text style={styles.bio} numberOfLines={3}>CTO na @Rocketseat. Apaixonado por Javascript, ReactJS, React Native, NodeJS e todo ecossistema em torno dessas tecnologias.</Text>
           </View>
         </View>
       </View>
