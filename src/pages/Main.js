@@ -9,7 +9,7 @@ export default function Main() {
       <Image source={logo} />
 
       <View style={styles.cardsContainer}>
-        <View style={styles.card}>
+        <View style={[styles.card, { zIndex: 3 }]}>
           <Image style={styles.avatar} source={{ uri: 'https://avatars2.githubusercontent.com/u/861751?v=4' }} />
           <View style={styles.footer}>
             <Text style={styles.name}>Diego Fernandes</Text>
@@ -17,7 +17,7 @@ export default function Main() {
           </View>
         </View>
 
-        <View style={styles.card}>
+        <View style={[styles.card, { zIndex: 2 }]}>
           <Image style={styles.avatar} source={{ uri: 'https://avatars2.githubusercontent.com/u/861751?v=4' }} />
           <View style={styles.footer}>
             <Text style={styles.name}>Diego Fernandes</Text>
@@ -25,7 +25,7 @@ export default function Main() {
           </View>
         </View>
 
-        <View style={styles.card}>
+        <View style={[styles.card, { zIndex: 1 }]}>
           <Image style={styles.avatar} source={{ uri: 'https://avatars2.githubusercontent.com/u/861751?v=4' }} />
           <View style={styles.footer}>
             <Text style={styles.name}>Diego Fernandes</Text>
