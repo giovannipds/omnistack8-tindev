@@ -13,7 +13,23 @@ export default function Main() {
           <Image source={{ uri: 'https://avatars2.githubusercontent.com/u/861751?v=4' }} />
           <View style={styles.footer}>
             <Text style={styles.name}>Diego Fernandes</Text>
-            <Text style={styles.bio}>CTO na @Rocketseat. Apaixonado por Javascript, ReactJS, React Native, NodeJS e todo ecossistema em torno dessas tecnologias. </Text>
+            <Text style={styles.bio}>CTO na @Rocketseat. Apaixonado por Javascript, ReactJS, React Native, NodeJS e todo ecossistema em torno dessas tecnologias.</Text>
+          </View>
+        </View>
+
+        <View style={styles.card}>
+          <Image source={{ uri: 'https://avatars2.githubusercontent.com/u/861751?v=4' }} />
+          <View style={styles.footer}>
+            <Text style={styles.name}>Diego Fernandes</Text>
+            <Text style={styles.bio}>CTO na @Rocketseat. Apaixonado por Javascript, ReactJS, React Native, NodeJS e todo ecossistema em torno dessas tecnologias.</Text>
+          </View>
+        </View>
+
+        <View style={styles.card}>
+          <Image source={{ uri: 'https://avatars2.githubusercontent.com/u/861751?v=4' }} />
+          <View style={styles.footer}>
+            <Text style={styles.name}>Diego Fernandes</Text>
+            <Text style={styles.bio}>CTO na @Rocketseat. Apaixonado por Javascript, ReactJS, React Native, NodeJS e todo ecossistema em torno dessas tecnologias.</Text>
           </View>
         </View>
       </View>
@@ -30,5 +46,19 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between'
   },
-  cardsContainer: {},
+
+  cardsContainer: {
+    flex: 1,
+    alignSelf: 'stretch',
+    justifyContent: 'center',
+    maxHeight: 500,
+  },
+
+  card: {
+    borderWidth: 1,
+    borderColor: '#ddd',
+    borderRadius: 8,
+    margin: 30,
+    overflow: 'hidden',
+  }
 });
