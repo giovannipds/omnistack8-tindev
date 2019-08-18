@@ -1,12 +1,14 @@
 import React from 'react';
-import { View, Text, SafeAreaView, Image, StyleSheet } from 'react-native';
+import { View, Text, SafeAreaView, Image, StyleSheet, TouchableOpacity } from 'react-native';
 
 import logo from '../assets/logo.png';
+import like from '../assets/like.png';
+import dislike from '../assets/dislike.png';
 
 export default function Main() {
   return (
     <SafeAreaView style={styles.container}>
-      <Image source={logo} />
+      <Image style={styles.logo} source={logo} />
 
       <View style={styles.cardsContainer}>
         <View style={[styles.card, { zIndex: 3 }]}>
@@ -34,7 +36,14 @@ export default function Main() {
         </View>
       </View>
 
-      <View />
+      <View style={styles.buttonsContainer}>
+        <TouchableOpacity style={styles.button}>
+          <Image source={dislike} />
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.button}>
+          <Image source={like} />
+        </TouchableOpacity>
+      </View>
     </SafeAreaView>
   );
 }
@@ -45,6 +54,10 @@ const styles = StyleSheet.create({
     backgroundColor: '#f5f5f5',
     alignItems: 'center',
     justifyContent: 'space-between'
+  },
+
+  logo: {
+    marginTop: 30,
   },
 
   cardsContainer: {
@@ -89,5 +102,28 @@ const styles = StyleSheet.create({
     color: '#999',
     marginTop: 5,
     lineHeight: 18,
+  },
+
+  buttonsContainer: {
+    flexDirection: 'row',
+    marginBottom: 30,
+  },
+
+  button: {
+    width: 50,
+    height: 50,
+    borderRadius: 25,
+    backgroundColor: '#fff',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginHorizontal: 20,
+    elevation: 2,
+    shadowColor: '#000',
+    shadowOpacity: 0.05,
+    shadowRadius: 2,
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
   },
 });
