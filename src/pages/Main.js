@@ -10,7 +10,7 @@ export default function Main() {
 
       <View style={styles.cardsContainer}>
         <View style={styles.card}>
-          <Image source={{ uri: 'https://avatars2.githubusercontent.com/u/861751?v=4' }} />
+          <Image style={styles.avatar} source={{ uri: 'https://avatars2.githubusercontent.com/u/861751?v=4' }} />
           <View style={styles.footer}>
             <Text style={styles.name}>Diego Fernandes</Text>
             <Text style={styles.bio}>CTO na @Rocketseat. Apaixonado por Javascript, ReactJS, React Native, NodeJS e todo ecossistema em torno dessas tecnologias.</Text>
@@ -18,7 +18,7 @@ export default function Main() {
         </View>
 
         <View style={styles.card}>
-          <Image source={{ uri: 'https://avatars2.githubusercontent.com/u/861751?v=4' }} />
+          <Image style={styles.avatar} source={{ uri: 'https://avatars2.githubusercontent.com/u/861751?v=4' }} />
           <View style={styles.footer}>
             <Text style={styles.name}>Diego Fernandes</Text>
             <Text style={styles.bio}>CTO na @Rocketseat. Apaixonado por Javascript, ReactJS, React Native, NodeJS e todo ecossistema em torno dessas tecnologias.</Text>
@@ -26,7 +26,7 @@ export default function Main() {
         </View>
 
         <View style={styles.card}>
-          <Image source={{ uri: 'https://avatars2.githubusercontent.com/u/861751?v=4' }} />
+          <Image style={styles.avatar} source={{ uri: 'https://avatars2.githubusercontent.com/u/861751?v=4' }} />
           <View style={styles.footer}>
             <Text style={styles.name}>Diego Fernandes</Text>
             <Text style={styles.bio}>CTO na @Rocketseat. Apaixonado por Javascript, ReactJS, React Native, NodeJS e todo ecossistema em torno dessas tecnologias.</Text>
@@ -61,5 +61,14 @@ const styles = StyleSheet.create({
     margin: 30,
     overflow: 'hidden',
     position: 'absolute',
-  }
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+  },
+
+  avatar: {
+    flex: 1,
+    height: 300,
+  },
 });
