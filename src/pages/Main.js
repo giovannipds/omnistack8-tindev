@@ -27,13 +27,13 @@ export default function Main({ navigation }) {
   }, [id])
 
   async function handleLike() {
-    const user = users[0];
+    const [user, ...rest] = users;
 
     await api.post(`/devs/${user.id}/likes`, null, {
       headers: { user: id },
     })
 
-    setUsers(users.filter(user => user._id !== id));
+    setUsers(rest);
   }
 
   async function handleDislike() {
