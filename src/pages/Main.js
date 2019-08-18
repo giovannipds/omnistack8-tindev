@@ -48,29 +48,15 @@ export default function Main({ navigation }) {
       <Image style={styles.logo} source={logo} />
 
       <View style={styles.cardsContainer}>
-        <View style={[styles.card, { zIndex: 3 }]}>
-          <Image style={styles.avatar} source={{ uri: 'https://avatars2.githubusercontent.com/u/861751?v=4' }} />
-          <View style={styles.footer}>
-            <Text style={styles.name}>Diego Fernandes</Text>
-            <Text style={styles.bio} numberOfLines={3}>CTO na @Rocketseat. Apaixonado por Javascript, ReactJS, React Native, NodeJS e todo ecossistema em torno dessas tecnologias.</Text>
+        { users.map((user, index) => (
+          <View key={user._id} style={[styles.card, { zIndex: users.length - index }]}>
+            <Image style={styles.avatar} source={{ uri: user.avatar }} />
+            <View style={styles.footer}>
+              <Text style={styles.name}>{user.name}</Text>
+              <Text style={styles.bio} numberOfLines={3}>{user.bio}</Text>
+            </View>
           </View>
-        </View>
-
-        <View style={[styles.card, { zIndex: 2 }]}>
-          <Image style={styles.avatar} source={{ uri: 'https://avatars2.githubusercontent.com/u/861751?v=4' }} />
-          <View style={styles.footer}>
-            <Text style={styles.name}>Diego Fernandes</Text>
-            <Text style={styles.bio} numberOfLines={3}>CTO na @Rocketseat. Apaixonado por Javascript, ReactJS, React Native, NodeJS e todo ecossistema em torno dessas tecnologias.</Text>
-          </View>
-        </View>
-
-        <View style={[styles.card, { zIndex: 1 }]}>
-          <Image style={styles.avatar} source={{ uri: 'https://avatars2.githubusercontent.com/u/861751?v=4' }} />
-          <View style={styles.footer}>
-            <Text style={styles.name}>Diego Fernandes</Text>
-            <Text style={styles.bio} numberOfLines={3}>CTO na @Rocketseat. Apaixonado por Javascript, ReactJS, React Native, NodeJS e todo ecossistema em torno dessas tecnologias.</Text>
-          </View>
-        </View>
+        ))}
       </View>
 
       <View style={styles.buttonsContainer}>
