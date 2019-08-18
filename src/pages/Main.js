@@ -1,11 +1,48 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { View, Text, SafeAreaView, Image, StyleSheet, TouchableOpacity } from 'react-native';
+
+import api from '../services/api';
 
 import logo from '../assets/logo.png';
 import like from '../assets/like.png';
 import dislike from '../assets/dislike.png';
 
-export default function Main() {
+export default function Main({ navigation }) {
+  const id = navigation.getParam('user');
+  const [users, setUsers] = useState([]);
+
+  console.log(id);
+
+  useEffect(() => {
+    async function loadUsers() {
+      const response = await api.get('/devs', {
+        headers: {
+          user: id,
+        }
+      })
+
+      setUsers(response.data);
+    }
+
+    loadUsers()
+  }, [id])
+
+  async function handleLike(id) {
+    await api.post(`/devs/${id}/likes`, null, {
+      headers: { user: id },
+    })
+
+    setUsers(users.filter(user => user._id !== id));
+  }
+
+  async function handleDislike(id) {
+    await api.post(`/devs/${id}/dislikes`, null, {
+      headers: { user: id },
+    })
+
+    setUsers(users.filter(user => user._id !== id));
+  }
+
   return (
     <SafeAreaView style={styles.container}>
       <Image style={styles.logo} source={logo} />
