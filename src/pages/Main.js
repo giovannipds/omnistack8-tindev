@@ -29,7 +29,7 @@ export default function Main({ navigation }) {
   async function handleLike() {
     const [user, ...rest] = users;
 
-    await api.post(`/devs/${user.id}/likes`, null, {
+    await api.post(`/devs/${user._id}/likes`, null, {
       headers: { user: id },
     })
 
@@ -37,11 +37,13 @@ export default function Main({ navigation }) {
   }
 
   async function handleDislike() {
-    await api.post(`/devs/${id}/dislikes`, null, {
+    const [user, ...rest] = users;
+
+    await api.post(`/devs/${user._id}/dislikes`, null, {
       headers: { user: id },
     })
 
-    setUsers(users.filter(user => user._id !== id));
+    setUsers(rest);
   }
 
   async function handleLogout() {
