@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, SafeAreaView, Image, StyleSheet } from 'react-native';
+import { View, Text, SafeAreaView, Image, StyleSheet } from 'react-native';
 
 import logo from '../assets/logo.png';
 
@@ -11,6 +11,10 @@ export default function Main() {
       <View style={styles.cardsContainer}>
         <View style={styles.card}>
           <Image source={{ uri: 'https://avatars2.githubusercontent.com/u/861751?v=4' }} />
+          <View style={styles.footer}>
+            <Text style={styles.name}>Diego Fernandes</Text>
+            <Text style={styles.bio}>CTO na @Rocketseat. Apaixonado por Javascript, ReactJS, React Native, NodeJS e todo ecossistema em torno dessas tecnologias. </Text>
+          </View>
         </View>
       </View>
     </SafeAreaView>
