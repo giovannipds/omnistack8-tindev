@@ -229,4 +229,13 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: '#FFF'
   },
+
+  matchBio: {
+    marginTop: 10,
+    fontSize: 16,
+    color: 'rgba(255, 255, 255, 0.8)',
+    lineHeight: 24,
+    textAlign: 'center',
+    paddingHorizontal: 30
+  }
 });
