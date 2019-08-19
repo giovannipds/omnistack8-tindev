@@ -237,5 +237,13 @@ const styles = StyleSheet.create({
     lineHeight: 24,
     textAlign: 'center',
     paddingHorizontal: 30
-  }
+  },
+
+  closeMatch: {
+    fontSize: 16,
+    color: 'rgba(255, 255, 255, 0.8)',
+    textAlign: 'center',
+    marginTop: 30,
+    fontWeight: 'bold'
+  },
 });
