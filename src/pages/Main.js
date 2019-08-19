@@ -209,4 +209,19 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center'
   },
+
+  matchAvatar: {
+    width: 160,
+    height: 160,
+    borderRadius: 80,
+    borderWidth: 5,
+    borderColor: '#FFF',
+    marginVertical: 30,
+  },
+
+  matchName: {
+    fontSize: 26,
+    fontWeight: 'bold',
+    color: '#FFF'
+  },
 });
