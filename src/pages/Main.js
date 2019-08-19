@@ -101,7 +101,7 @@ export default function Main({ navigation }) {
 
       { matchDev && (
         <View style={styles.matchContainer}>
-          <Image source={itsamatch} />
+          <Image style={styles.matchImage} source={itsamatch} />
           <Image style={styles.matchAvatar} source={{ uri: 'https://avatars2.githubusercontent.com/u/861751?v=4' }} />
 
           <Text style={styles.matchName}>Diego Fernandes</Text>
@@ -208,6 +208,11 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(0, 0, 0, 0.8)',
     justifyContent: 'center',
     alignItems: 'center'
+  },
+
+  matchImage: {
+    height: 60,
+    resizeMode: 'contain'
   },
 
   matchAvatar: {
