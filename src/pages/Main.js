@@ -13,7 +13,7 @@ import itsamatch from '../assets/itsamatch.png';
 export default function Main({ navigation }) {
   const id = navigation.getParam('user');
   const [users, setUsers] = useState([]);
-  const [matchDev, setMatchDev] = useState(true);
+  const [matchDev, setMatchDev] = useState(null);
 
   useEffect(() => {
     async function loadUsers() {
@@ -102,10 +102,10 @@ export default function Main({ navigation }) {
       { matchDev && (
         <View style={styles.matchContainer}>
           <Image style={styles.matchImage} source={itsamatch} />
-          <Image style={styles.matchAvatar} source={{ uri: 'https://avatars2.githubusercontent.com/u/861751?v=4' }} />
+          <Image style={styles.matchAvatar} source={{ uri: matchDev.avatar }} />
 
-          <Text style={styles.matchName}>Diego Fernandes</Text>
-          <Text style={styles.matchBio}>Co-founder & CEO @Rocketseat</Text>
+          <Text style={styles.matchName}>{matchDev.name}</Text>
+          <Text style={styles.matchBio}>{matchDev.bio}</Text>
 
           <TouchableOpacity onPress={() => setMatchDev(null)}>
             <Text style={styles.closeMatch}>FECHAR</Text>
