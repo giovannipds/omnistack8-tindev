@@ -202,4 +202,11 @@ const styles = StyleSheet.create({
       height: 2,
     },
   },
+
+  matchContainer: {
+    ...StyleSheet.absoluteFillObject,
+    backgroundColor: 'rgba(0, 0, 0, 0.8)',
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
 });
