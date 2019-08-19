@@ -110,7 +110,6 @@ export default function Main({ navigation }) {
           <TouchableOpacity onPress={() => setMatchDev(null)}>
             <Text style={styles.closeMatch}>FECHAR</Text>
           </TouchableOpacity>
-
         </View>
       ) }
     </SafeAreaView>
@@ -207,7 +206,8 @@ const styles = StyleSheet.create({
     ...StyleSheet.absoluteFillObject,
     backgroundColor: 'rgba(0, 0, 0, 0.8)',
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
+    elevation: 3,
   },
 
   matchImage: {
